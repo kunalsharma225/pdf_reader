@@ -2,7 +2,7 @@
 import streamlit as st
 import fitz
 import re
-from langchain.embeddings import OpenAIEmbeddings
+from langchain.open_ai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chat_models import ChatOpenAI
@@ -79,3 +79,4 @@ if uploaded_file is not None:
             result = qa_chain.run(question)
             st.markdown("### 💬 Answer:")
             st.write(result)
+
