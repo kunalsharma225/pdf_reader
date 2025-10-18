@@ -8,7 +8,7 @@ from langchain_community.vectorstores import FAISS
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import ChatOpenAI
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain.schema import Document
 import os
@@ -81,4 +81,5 @@ if uploaded_file is not None:
             result = qa_chain.run(question)
             st.markdown("### 💬 Answer:")
             st.write(result)
+
 
