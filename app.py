@@ -4,6 +4,7 @@ import fitz
 import re
 import os
 from dotenv import load_dotenv
+load_dotenv()
 
 from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -12,7 +13,6 @@ from langchain_community.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain.schema import Document
-load_dotenv()
 
 
 def clean_text(raw_text):
@@ -80,6 +80,7 @@ if uploaded_file is not None:
             result = qa_chain.run(question)
             st.markdown("### 💬 Answer:")
             st.write(result)
+
 
 
 
