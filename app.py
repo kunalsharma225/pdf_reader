@@ -4,7 +4,7 @@ import fitz
 import re
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
@@ -79,6 +79,7 @@ if uploaded_file is not None:
             result = qa_chain.run(question)
             st.markdown("### 💬 Answer:")
             st.write(result)
+
 
 
 
