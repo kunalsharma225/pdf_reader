@@ -2,8 +2,8 @@
 import streamlit as st
 import fitz
 import re
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import FAISS
 
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -81,3 +81,4 @@ if uploaded_file is not None:
             result = qa_chain.run(question)
             st.markdown("### 💬 Answer:")
             st.write(result)
+
